@@ -1,0 +1,71 @@
+header {
+    background-color: dimgrey;
+}
+header ul {
+    list-style-type: none;
+    margin-right: 2em;
+    overflow: hidden;
+}
+header li {
+    float: right;
+}
+header li a {
+    display: block;
+    color: white;
+    text-align: center;
+    font-size: 1em;
+    font-weight: lighter;
+    padding: 0.5em 0.5em;
+    text-decoration: none;
+}
+h3{
+    text-align: center;
+    
+    padding-right: 300px;  
+}
+.glyphicon {
+    font-weight: lighter;
+    padding: 0.1em 0.5em;
+}
+.navbar-inverse .navbar-nav > li > a{
+    color: black;
+}
+.navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a:hover{
+    color: white;
+}
+a{
+    font-weight: bold; 
+    font-size: 20px;
+    color: black;
+}
+.mainpage {
+    background-color:rgb(162, 168, 162);
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.master
+{
+    margin: 50px;
+    padding-left: 10px;
+    background-color:rgb(231, 231, 231);
+   
+}
+.fail
+{
+    text-align: center;
+    color: brown;
+}
+.navBar
+{
+     background-color:rgb(162, 168, 162);
+    /* background-image: url("/assets/images/master.jpeg"); */
+    border: none;
+    
+}
+.text  {
+   color:black;
+    margin-right: 2em;
+}
+.text hover{
+    color: white;
+}

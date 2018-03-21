@@ -1,0 +1,61 @@
+<h3>Select Training</h3>
+<br/>
+<div class="textdec">
+    <div class="row">
+        <div class="col-sm-2 " style="background-color:gray;text-align: center;">Program Name:</div>
+        <div class="col-sm-2" style="background-color:rgb(172, 172, 172);text-align: center;"> Trainer Name :</div>
+        <div class="col-sm-2" style="background-color:gray;text-align: center;">Date: </div>
+        <div class="col-sm-2" style="background-color:rgb(172, 172, 172);text-align: center;">Venue:</div>
+        <div class="col-sm-4" style="background-color:gray;text-align: center;">Options </div>
+    </div>
+</div>
+<br/>
+<br/>
+<div class="editingmode" [hidden]="!editing">
+    <div class="row">
+        <div class="col-sm-2">
+            <div class="cols-sm-10">
+                <p class="text-info1"></p>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="cols-sm-10">
+                <div class="input-group">
+                    <select class="form-control" id="Id2">
+                        <option *ngFor="let user of users" [ngValue]="user.UserName">
+                            {{user.UserName}}
+                        </option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="cols-sm-10">
+                <p class="text-info3"></p>
+            </div>
+        </div>
+        <div class="col-sm-2">
+            <div class="cols-sm-10">
+                <p class="text-info4"></p>
+            </div>
+        </div>
+        <div class="col-sm-4" style="text-align: center;">
+            <button type="submit" (click)="update()">Update</button>
+        </div>
+    </div>
+</div>
+<div *ngFor="let training of train">
+    <div class="control-label" [hidden]="editing">
+        <input type="hidden" name="training">
+        <div class="row">
+            <div class="col-sm-2" style="background-color:lightgrey;text-align: center;">{{training.TrainingName}}</div>
+            <div class="col-sm-2" style="background-color:rgba(211, 211, 211, 0.76);text-align: center;"> {{training.Trainer}}</div>
+            <div class="col-sm-2" style="background-color:lightgrey;text-align: center;">{{training.Date | date:'medium'}}</div>
+            <div class="col-sm-2" style="background-color:rgba(211, 211, 211, 0.76);text-align: center;">{{training.Venue}}</div>
+            <div class="col-sm-4" style="background-color:lightgrey;text-align: center;">
+                <button id="edit" class="btn" (click)="EditFunction(training.TrainingID, training.TrainingName,training.Trainer,training.Date,training.Venue )">Edit</button>
+                <button class="btn" (click)="onSelectionChange(training.TrainingID)">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
